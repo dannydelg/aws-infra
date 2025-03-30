@@ -53,6 +53,7 @@ resource "aws_instance" "ec2instance" {
   }
 }
 
+// Create an AMI From our instacnce 
 resource "aws_ami_from_instance" "ec2ami" {
     name               = "MyEC2Image"
     source_instance_id = aws_instance.ec2instance.id
